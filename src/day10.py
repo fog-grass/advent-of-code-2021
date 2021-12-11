@@ -19,25 +19,25 @@ for l, line in enumerate(data):
 		if item in openings:
 			queue[l].append(matcher[item])
 			if i == len(line) - 1:
-				print(f"Line {l} passed: {line}")
+				#print(f"Line {l} passed: {line}")
 				part2_piece = 0
 				#print(len(queue[-1]))
 				for j in range(len(queue[-1]) - 1, -1, -1):
-					print(filling_price[queue[-1][j]])
+					#print(filling_price[queue[-1][j]])
 					part2_piece = part2_piece * 5 + filling_price[queue[-1][j]]
-				print(f"Part 2 of line {l}: {part2_piece}.")
+				#print(f"Part 2 of line {l}: {part2_piece}.")
 				part2.append(part2_piece)				
 		elif len(queue[-1]) > 0:
 			if queue[-1][-1] == item:
 				queue[-1].pop()
 				if i == len(line) - 1:
-					print(f"Line {l} passed: {line}")
+					#print(f"Line {l} passed: {line}")
 					part2_piece = 0
 					#print(len(queue[-1]))
 					for j in range(len(queue[-1]) - 1, -1, -1):
-						print(filling_price[queue[-1][j]])
+						#print(filling_price[queue[-1][j]])
 						part2_piece = part2_piece * 5 + filling_price[queue[-1][j]]
-					print(f"Part 2 of line {l}: {part2_piece}.")
+					#print(f"Part 2 of line {l}: {part2_piece}.")
 					part2.append(part2_piece)
 			else:
 				#print(f"Line number {l} done.")
